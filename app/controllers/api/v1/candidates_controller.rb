@@ -22,3 +22,4 @@ class API::V1::CandidatesController < ApplicationController
   def load_candidate
     @candidate = Candidate.find(params[:id])
   end
+end

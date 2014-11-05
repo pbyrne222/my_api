@@ -1,5 +1,7 @@
 class VotesController < ApplicationController
   include ActionController::HttpAuthentication::Token::ControllerMethods
+  include ActionController::MimeResponds
+
 
   before_filter :restrict_access, only: [:create]
 
