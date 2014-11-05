@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+
+ namespace :api do
+    namespace :v1 do
+      resources :candidates, only: [:index, :show]
+      resources :voters, only: [:create, :show, :update]
+      resources :votes, only: [:create]
+    end
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
